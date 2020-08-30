@@ -1,0 +1,15 @@
+1. Command to list maven goals:
+	mvn help:describe -Dcmd=deploy
+
+2. Command to demonstrate local copy of maven
+
+	mvn -Dmaven.repo.local=$HOME/.my/other/repository clean install
+
+
+3.Command  to extract & save the build logs to a file instead of console output
+	mvn clean install -l output.log
+
+
+4.Command to prevent maven from downloading dependencies every time/ Make maven work without internet
+
+	mvn clean install -o
