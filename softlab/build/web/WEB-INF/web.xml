@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param> 
+        <description>Location to store uploaded file</description> 
+        <param-name>video-upload</param-name> 
+        <param-value>
+            C:\Users\Apoorva Reddy\Documents\NetBeansProjects\softlab\build\web\video\
+        </param-value> 
+    </context-param>
+    <context-param>
+        <param-name>c_assign</param-name>
+        <param-value>C:\Users\Apoorva Reddy\Documents\NetBeansProjects\softlab\build\web\c_assign\</param-value>
+    </context-param>
+    <context-param> 
+        <description>Location to store uploaded file</description> 
+        <param-name>pdf-upload</param-name> 
+        <param-value>
+            C:\Users\Apoorva Reddy\Documents\NetBeansProjects\softlab\build\web\pdf\
+        </param-value> 
+    </context-param>
+    <servlet>
+            <servlet-name>UploadVideo</servlet-name>
+            <servlet-class>UploadVideo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+            <servlet-name>UploadVideo</servlet-name>
+            <url-pattern>/UploadVideo</url-pattern>
+    </servlet-mapping>
+    <servlet>
+            <servlet-name>UploadPdf</servlet-name>
+            <servlet-class>UploadPdf</servlet-class>
+    </servlet>
+    <servlet-mapping>
+            <servlet-name>UploadPdf</servlet-name>
+            <url-pattern>/UploadPdf</url-pattern>
+    </servlet-mapping>
+</web-app>
